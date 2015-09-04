@@ -1,7 +1,7 @@
 docker-nginx-reloader
 =====================
 
-Reload nginx configuration when specified containers are started/restarted.
+Reload nginx configuration when specified docker containers are started/restarted.
 
 Build to work together with https://hub.docker.com/r/mgood/resolvable/ since nginx reload is required to take DNS update on upstream directives.
 
@@ -25,7 +25,7 @@ Start resolvable
 		-v /etc/resolv.conf:/tmp/resolv.conf \
 		 mgood/resolvable
 
-/etc/nginx/conf.d/myapp1.conf 
+/nginx/myapp1.conf 
 
 	upstream myapp1 {
 		server myapp1.docker;
@@ -39,7 +39,7 @@ Start resolvable
 		}
 	}
 
-/etc/nginx/conf.d/myapp2.conf
+/nginx/myapp2.conf
                  
 	upstream myapp2 {
 		server myapp2.docker;
@@ -52,6 +52,14 @@ Start resolvable
 			proxy_pass http://myapp2;
 		}
 	}
+
+Start nginx
+
+	docker run -d \
+		--name mynginx \
+		-v /nginx/conf:/etc/init.d/conf.d \
+		-p 80:80 \
+		nginx
 
 * GitHub ([surfdude75](http://github.com/surfdude75))
 * Email ([rafaelsobral3@gmail.com](mailto:rafaelsobral3@gmail.com))
