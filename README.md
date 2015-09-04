@@ -5,6 +5,8 @@ Reload nginx configuration when specified docker containers are started/restarte
 
 Build to work together with https://hub.docker.com/r/mgood/resolvable/ since nginx reload is required to take DNS update on upstream directives.
 
+Use as first argument the nginx container name followed by the name of containers to watch. 
+
 Usage example:
 --------------
 
