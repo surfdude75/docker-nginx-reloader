@@ -12,7 +12,7 @@ Start nginx reloader
 	docker run -d \
 		--name nginx-reloader \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		rsobral/docker-nginx-reloader \
+		surfdude75/docker-nginx-reloader \
 		mynginx myapp1 myapp2
 
 Start resolvable
@@ -52,5 +52,5 @@ server {
         }
 }
 
-* GitHub ([rsobral](http://github.com/rsobral))
+* GitHub ([surfdude75](http://github.com/surfdude75))
 * Email ([rafaelsobral3@gmail.com](mailto:rafaelsobral3@gmail.com))
