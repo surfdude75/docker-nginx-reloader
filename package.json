@@ -1,0 +1,30 @@
+{
+	"name": "docker-nginx-reloader",
+	"version": "0.0.1",
+	"description": "Watch proxied containers restart to reload nginx",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/rsobral/docker-nginx-reloader.git"
+	},
+	"keywords": [
+		"docker",
+	 	"nginx",
+		"container",
+		"restart",
+		"reload",
+		"resolvable"
+	],
+	"author": "Rafael Sobral <rafaelsobral3@gmail.com>",
+	"license": "BSD-2-Clause",
+	"bugs": {
+		"url": "https://github.com/rsobral/docker-nginx-reloader/issues"
+	},
+	"homepage": "https://github.com/rsobral/docker-nginx-reloader",
+	"dependencies": {
+		"docker-events" : "0.0.2",
+		"dockerode": "^2.0.3"
+	}
+} 
