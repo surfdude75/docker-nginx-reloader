@@ -1,3 +1,7 @@
+Deprecated. Use the following docker container for it.
+
+https://hub.docker.com/r/phensley/docker-dns/
+
 docker-nginx-reloader
 =====================
 
